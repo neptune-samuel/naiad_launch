@@ -7,16 +7,22 @@ def generate_launch_description():
         Node(
             package='naiad_chassis',
             executable='naiad_chassis',
-            name='n1_chassis',
             parameters=[{'serial_port' : '/dev/ttyTHS2'}, 
                         {'serial_options' : '460800'},
                         {'debug_tcp_port' : 9600}
                     ]
         ),
         Node(
+            package='naiad_chassis',
+            executable='naiad_minirc',
+            parameters=[{'tcp_port' : 9800}, 
+                        {'continuous_mode' : False},
+                        {'motion_control_period' : 50}
+                    ]
+        ),        
+        Node(
             package='naiad_fog',
             executable='naiad_fog',
-            name='n1_fog',
             parameters=[{'serial_port' : '/dev/ttyTHS1'}, 
                         {'serial_options' : '115200'},
                         {'state_publish_period' : 100},
