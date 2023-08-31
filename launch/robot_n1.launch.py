@@ -28,6 +28,10 @@ def generate_launch_description():
                         {'state_publish_period' : 100},
                         {'vofa_service' : '9701:gx,gy,gz,ax,ay,az,er,ey,ep'}
                     ]
+        ),
+        Node(
+            package='naiad_cyberbot',
+            executable='naiad_cyberbot'
         )
     ])
 
