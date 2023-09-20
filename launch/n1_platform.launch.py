@@ -32,10 +32,5 @@ def generate_launch_description():
         Node(
             package='naiad_system',
             executable='naiad_system'
-        ),            
-        Node(
-            package='naiad_cyberbot',
-            executable='naiad_cyberbot'
-        ),    
+        )
     ])
-
