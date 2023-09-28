@@ -31,6 +31,11 @@ def generate_launch_description():
         ),
         Node(
             package='naiad_system',
-            executable='naiad_system'
+            executable='naiad_system',
+            parameters=[{'polling_interval' : 1000}, 
+                        {'plc_interface' : 'eth0'},
+                        {'plc_polling_interval' : 1000},
+                        {'monitor_processes' : 'naiad_system:ros,naiad_chassis:ros,naiad_fog:ros,naiad_cyberbot:ros'}
+                    ]
         )
     ])
