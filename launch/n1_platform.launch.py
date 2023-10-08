@@ -37,7 +37,7 @@ def generate_launch_description():
             executable='naiad_system',
             parameters=[{'polling_interval' : 1000}, 
                         {'pairlink_server_port' : 9595},
-                        {'monitor_processes' : 'plc_pairlink,_ros2_daemon,naiad_system:ros,naiad_chassis:ros,naiad_fog:ros,naiad_cyberbot:ros'}
+                        {'monitor_processes' : 'plc_pairlink,serial_logd,_ros2_daemon,naiad_system:ros,naiad_chassis:ros,naiad_fog:ros,naiad_cyberbot:ros'}
                     ]
         )
     ])
